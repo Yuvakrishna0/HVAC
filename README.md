@@ -1,6 +1,6 @@
 # 🌬️ Smart HVAC Airflow Balancing System
 
-> An IoT-based intelligent airflow control system that automatically adjusts fan speed based on real-time temperature conditions using a **DHT11** sensor, **ESP8266** microcontroller, and **PWM control** via an **L298N motor driver**.
+> An IoT-based intelligent airflow control system that automatically adjusts fan speed based on real-time temperature conditions using a **DHT11** sensor, **ESP32** microcontroller, and **PWM control** via an **L298N motor driver**.
 
 ---
 
@@ -27,7 +27,7 @@ The system continuously reads temperature data and adjusts the cooling fan speed
 
 | Component | Description |
 |---|---|
-| ESP8266 NodeMCU | Main microcontroller |
+| ESP32 NodeMCU | Main microcontroller |
 | DHT11 Temperature Sensor | Reads ambient temperature |
 | L298N Motor Driver Module | Controls fan speed via PWM |
 | 5V DC Fan | Cooling output |
@@ -40,10 +40,10 @@ The system continuously reads temperature data and adjusts the cooling fan speed
 ## 🏗️ System Architecture
 
 ```
-Temperature Sensor → ESP8266 Controller → PWM Signal → L298N Driver → Cooling Fan
+Temperature Sensor → ESP32 Controller → PWM Signal → L298N Driver → Cooling Fan
 ```
 
-The **DHT11** sensor collects temperature data and sends it to the **ESP8266**. The microcontroller processes the data and generates a **PWM signal** that controls the fan speed through the **L298N motor driver**.
+The **DHT11** sensor collects temperature data and sends it to the **ESP32**. The microcontroller processes the data and generates a **PWM signal** that controls the fan speed through the **L298N motor driver**.
 
 ---
 
@@ -75,16 +75,16 @@ The **DHT11** sensor collects temperature data and sends it to the **ESP8266**. 
 
 ### ⚡ Power Setup
 
-- ESP8266 powered through **USB**
+- ESP32 powered through **USB**
 - L298N powered via **external 5V supply**
-- ⚠️ **Ground must be common** between ESP8266 and L298N
+- ⚠️ **Ground must be common** between ESP32 and L298N
 
 ---
 
 ## 💻 Software Requirements
 
 - [Arduino IDE](https://www.arduino.cc/en/software)
-- ESP8266 Board Package
+- ESP32 Board Package
 - DHT Sensor Library
 
 ---
@@ -92,17 +92,17 @@ The **DHT11** sensor collects temperature data and sends it to the **ESP8266**. 
 ## 🚀 Installation
 
 1. Install **Arduino IDE**
-2. Install **ESP8266 board support** in Board Manager
+2. Install **ESP32 board support** in Board Manager
 3. Install the **DHT sensor library**
 4. Connect hardware according to the diagram above
-5. Upload the code to the ESP8266
+5. Upload the code to the ESP32
 
 ---
 
 ## ⚙️ How It Works
 
 1. The **DHT11 sensor** reads temperature from the environment
-2. **ESP8266** processes the sensor data
+2. **ESP32** processes the sensor data
 3. Based on temperature, a **PWM signal** is generated
 4. **L298N** adjusts the fan speed accordingly
 5. Fan speed **increases as temperature rises**
