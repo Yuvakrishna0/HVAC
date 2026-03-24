@@ -138,6 +138,9 @@ The **DHT11** sensor collects temperature data and sends it to the **ESP32**. Th
 - [ ] Integration with smart building systems
 
 ---
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98e59508-d1c4-47c0-9061-324b924e372a" />
+<img width="840" height="456" alt="image" src="https://github.com/user-attachments/assets/2d3df04f-0cfa-4364-afc3-ba32f65c7454" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e47bf412-95fe-4a79-b62e-4444d14de4a1" />
 
 ## 📄 License
 
